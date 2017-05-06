@@ -1,0 +1,15 @@
+.nav_bar{
+	display: table; width: 100%; padding-left: 100px; padding-right: 100px;position: fixed; z-index: 4;
+}
+
+.nav_bar_item{
+	display: table-cell; width: 100px;
+}
+
+.footer{
+	padding-left: 64px; padding-right: 64px; padding-top: 64px;
+}
+
+.footer table tr td ul{
+	list-style: none; width:
+}

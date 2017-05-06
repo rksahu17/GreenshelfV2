@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Online Library</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  	<link rel="stylesheet" type="text/css" href="css/basic_template.css">
+  	<link rel="stylesheet" type="text/css" href="css/viewbook.css">
+	<style type="text/css">
+			#nav_searchBox{
+				color: #000;
+	    width: 130px;
+	    box-sizing: border-box;
+	    border: 2px solid #ccc;
+	    border-radius: 4px;
+	    font-size: 16px;
+	    background-color: white;
+	    background-image: url('img/searchicon.png');
+	    background-position: 10px 10px; 
+	    background-repeat: no-repeat;
+	    padding: 12px 20px 12px 40px;
+	    -webkit-transition: width 0.4s ease-in-out;
+	    transition: width 0.4s ease-in-out;
+	}
+
+	#nav_searchBox:focus {
+    width: 100%;
+	}
+	</style>
+</head>
+
+<body>
+<!--
+	Nav Header
+-->
+<div class="nav_bar w3-container w3-teal w3-padding-12"  style="top: 0px;">
+	<div class="nav_bar_item">
+		<a style="border-radius: 50%" href="#" class="w3-bar-item w3-button w3-theme-l1"><img alt="Brand" src="img/logo.png" height="50px" width="35px"></a>					
+	</div>
+	<div style="display: table-cell;">
+			  <input style="width: 100%;" id="nav_searchBox" type="text" name="search" placeholder="Search">							
+	</div>
+	<div class="nav_bar_item" style="vertical-align: middle; padding-left: 8px; padding-bottom: 5px ">
+			<button class="w3-button w3-right" data-popup-open="login_popup"><a href="#" class="w3-button"><img style="height: 20px;" src="img/cart.png"></a>Cart</button>			
+	</div>
+</div>
+
+
+<!--
+	
+-->
+	<!--
+		Option menu
+	-->
+	<div style="display: table; margin-top: 115px; margin-bottom: 30px; width: 100%">
+		<div style="display: table-cell; vertical-align: top; background-color: #009688; width: 8%; padding: 16px;">
+			<span style="margin: 8px; color: white; font-size: 20px; font-weight: bold;">Filters</span>
+			<hr>
+			<div>
+			  <div class="dropdown">
+			    <button style="width: 100%" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Branch
+			    <span class="caret"></span></button>
+			    <ul class="dropdown-menu">
+			      <li><a href="#">B.Tech</a></li>
+			      <li><a href="#">M.Tech</a></li>
+			      <li><a href="#">Ph.D</a></li>
+			    </ul>
+			  </div>
+			  <br>
+			  
+			  <div class="dropdown">
+			    <button style="width: 100%" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Topic
+			    <span class="caret"></span></button>
+			    <ul class="dropdown-menu">
+			      <li><a href="#">Networking</a></li>
+			      <li><a href="#">Graph</a></li>
+			      <li><a href="#">Datastructure</a></li>
+			    </ul>
+			  </div>
+			  <br>
+	      	  
+	      	  <button style="width: 100%" class="btn btn-default">Top Issued</button>
+	      	  <br><br>
+	      	  
+	      	  <button style="width: 100%" class="btn btn-default">New Arrival</button>
+			</div>
+		</div>
+		<!--
+			Selected book details
+		-->
+		<div style="display: table-cell; width: 49%;"> 
+			<!-- book image-->
+			<div style="display: inline-block; text-align: center; margin-left: 100px;">
+				<img src="img/books/book.jpeg" style="width: 280px; height: 400px;"><br>
+				<div style="margin-top: 20px;">
+					<button style="width: 200px; height: 50px" class="w3-button btn-warning">ADD TO CART</button>
+					<button style="margin-left: 20px; width: 100px;height: 50px" class="w3-button btn-success">ISSUE</button>
+				</div>
+			</div>
+			<!-- book details div-->
+			<div class="book_details">
+				<h3 style="margin-left: 8px;">Networking Depth</h3>
+				<table class="details_table">
+					<tr>
+						<td>
+							<span class="title">Author</span>			
+						</td>
+						<td>
+							<span class="detail">Sanker Behera</span>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align: top;">
+							<span class="title">Description</span>
+						</td>
+						<td style="padding-left: 48px;">
+							<span>When five-year-old Sivagami witnesses her father being branded a traitor and executed by the maharaja of Mahishmathi,she vows to one day destroy the kingdom.At seventeen,she recovers a manuscript from her crumbling ancestral mansion.Written in a strange language called Paisachi,the manuscript contains a secret that may redeem her father or condemn him further.</span>			
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="title">Pages</span>			
+						</td>
+						<td>
+							<span class="detail">256</span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="title">Availabe</span>			
+						</td>
+						<td>
+							<span class="detail">10 copies</span>
+						</td>
+					</tr>
+
+				</table>
+				
+			</div>
+
+		</div>
+
+	</div>
+
+
+<!-- 
+	Footer 
+-->
+<footer class="footer w3-container w3-teal">	
+	<table style="width: 100%;">
+		<tr>
+			<td>
+				
+			</td>
+			<td>
+				<ul>
+					<li>
+						<h4>&#9654; <a style="color: white;" href="feedback.html">Feedback</a></h4>			
+					</li>
+					<li>
+						<h4>&#9654; <a style="color: white;" href="faq.html">FAQ</a></h4>					
+					</li>
+				</ul>
+	
+			</td>
+		</tr>
+	</table>
+	<hr>
+	<p style="text-align: center;">
+		&copy; copyright
+	</p>
+</footer>
+
+</body>
+</html> 

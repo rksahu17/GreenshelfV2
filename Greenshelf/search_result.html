@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Online Library</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  	<link rel="stylesheet" type="text/css" href="css/basic_template.css">
+  	<link rel="stylesheet" type="text/css" href="css/search_result.css">
+	<style type="text/css">
+			#nav_searchBox{
+				color: #000;
+	    width: 130px;
+	    box-sizing: border-box;
+	    border: 2px solid #ccc;
+	    border-radius: 4px;
+	    font-size: 16px;
+	    background-color: white;
+	    background-image: url('img/searchicon.png');
+	    background-position: 10px 10px; 
+	    background-repeat: no-repeat;
+	    padding: 12px 20px 12px 40px;
+	    -webkit-transition: width 0.4s ease-in-out;
+	    transition: width 0.4s ease-in-out;
+	}
+
+	#nav_searchBox:focus {
+    width: 100%;
+	}
+	</style>
+</head>
+
+<body>
+<!--
+	Nav Header
+-->
+<div class="nav_bar w3-container w3-teal w3-padding-12"  style="top: 0px;">
+	<div class="nav_bar_item">
+		<a style="border-radius: 50%" href="#" class="w3-bar-item w3-button w3-theme-l1"><img alt="Brand" src="img/logo.png" height="50px" width="35px"></a>					
+	</div>
+	<div style="display: table-cell;">
+			  <input style="width: 100%;" id="nav_searchBox" type="text" name="search" placeholder="Search">							
+	</div>
+	<div class="nav_bar_item" style="vertical-align: middle; padding-left: 8px; padding-bottom: 5px ">
+			<button class="w3-button w3-right" data-popup-open="login_popup"><a href="#" class="w3-button"><img style="height: 20px;" src="img/cart.png"></a>Cart</button>			
+	</div>
+</div>
+
+
+<!--
+	
+-->
+	<!--
+		Option menu
+	-->
+	<div class="cart" style="width: 100%;">
+
+	<div style="display: table; margin-top: 90px; margin-bottom: 30px; width: 100%;">
+		<div style="display: table-cell; vertical-align: top; background-color: #009688; width: 15.5%; padding: 16px;">
+			<span style="margin: 8px; color: white; font-size: 20px; font-weight: bold;">Filters</span>
+			<hr>
+			<div>
+			  <div class="dropdown">
+			    <button style="width: 100%" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Branch
+			    <span class="caret"></span></button>
+			    <ul class="dropdown-menu">
+			      <li><a href="#">B.Tech</a></li>
+			      <li><a href="#">M.Tech</a></li>
+			      <li><a href="#">Ph.D</a></li>
+			    </ul>
+			  </div>
+			  <br>
+			  
+			  <div class="dropdown">
+			    <button style="width: 100%" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Topic
+			    <span class="caret"></span></button>
+			    <ul class="dropdown-menu">
+			      <li><a href="#">Networking</a></li>
+			      <li><a href="#">Graph</a></li>
+			      <li><a href="#">Datastructure</a></li>
+			    </ul>
+			  </div>
+			  <br>
+	      	  
+	      	  <button style="width: 100%" class="btn btn-default">Top Issued</button>
+	      	  <br><br>
+	      	  
+	      	  <button style="width: 100%" class="btn btn-default">New Arrival</button>
+			</div>
+		</div>
+		<!--
+			Selected book details
+		-->
+			<div class="cart_card" style="width: 95%;">
+				<span class="heading">Showing results for "Networking books"</span>
+				<!-- TODO: Add dynamically-->
+				<hr>
+				<table id="search_result_table" class="cart_item" width="1005">
+				</table>
+				<!-- -->
+			</div>
+
+	</div>
+	</div>
+
+<!-- 
+	Footer 
+-->
+<footer class="footer w3-container w3-teal">	
+	<table style="width: 100%;">
+		<tr>
+			<td>
+				
+			</td>
+			<td>
+				<ul>
+					<li>
+						<h4>&#9654; <a style="color: white;" href="feedback.html">Feedback</a></h4>			
+					</li>
+					<li>
+						<h4>&#9654; <a style="color: white;" href="faq.html">FAQ</a></h4>					
+					</li>
+				</ul>
+	
+			</td>
+		</tr>
+	</table>
+	<hr>
+	<p style="text-align: center;">
+		&copy; copyright
+	</p>
+</footer>
+
+<script>
+	/*Assume the is the data*/
+	var jsonString = '{"list_of_book" : [{"book_name" : "Computer organization", "author" : "Wilium stalling", "available": "6"},{"book_name" : "Computer organization", "author" : "Wilium stalling", "available": "6"},{"book_name" : "Computer organization", "author" : "Wilium stalling", "available": "6"}]}';
+
+	var jsonObj = JSON.parse(jsonString);
+
+	var searchResultTable = $('#search_result_table');
+	var bookList = jsonObj.list_of_book;
+	var row = '<tr>';
+	var i = 1;
+	alert(bookList.length);
+
+	for(var i = 1; i <= bookList.length; i++){
+		row += '<td><img src="img/books/book.jpeg" style="width: 120px; height: 160px;"><br><br><div><span class="title">' 
+		+ bookList[i-1].book_name + '</span><br><span class="author">By' 
+		+ bookList[i-1].author + '</span><br><span class="status">AVAILABLE ' 
+		+ bookList[i-1].available + '</span><br></div></td>';
+		  if(i % 4 == 0){
+			row = '<tr>' + row + '</tr>';
+			// alert(row);
+			row = '';
+		 }
+
+	}
+
+	searchResultTable.append(row + '<td></td></tr>');
+
+
+</script>
+</body>
+</html> 

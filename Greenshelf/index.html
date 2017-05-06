@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Online Library</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
+
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Basic-->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/login_page.css">
+
+</head>
+
+<body>
+<!--
+	Nav Header
+-->
+<div class="w3-container w3-teal w3-padding-32">
+<table width="100%">
+	<tr>
+		<td style="text-align: center;">
+			<a style="border-radius: 50%" href="#" class="w3-bar-item w3-button w3-theme-l1"><img alt="Brand" src="img/logo.png" height="80" width="70"></a>
+		</td>
+		<td style="text-align: center;">
+			<h1>Department Online Library</h1>
+			<!-- 
+				Catogaries 
+			-->
+			<div class="w3-container">
+			    <div class="w3-dropdown-hover">
+			      <button class="w3-button">Catagories &#9662;</button>
+			      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+			        <a href="#" class="w3-bar-item w3-button">B.Tech.</a>
+			        <a href="#" class="w3-bar-item w3-button">M.Tech.</a>
+				        <a href="#" class="w3-bar-item w3-button">Ph.D.</a>
+
+				    <div class="w3-dropdown-hover">
+				      <button class="w3-button">Branch &#9662;</button>
+				      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+				        <a href="#" class="w3-bar-item w3-button">B.Tech.</a>
+				        <a href="#" class="w3-bar-item w3-button">M.Tech.</a>
+				        <a href="#" class="w3-bar-item w3-button">Ph.D.</a>        
+				      </div>
+				    </div>
+			      </div>
+			    </div>
+
+			    <div class="w3-dropdown-hover">
+			      <button class="w3-button">Topic &#9662;</button>
+			      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+			        <a href="#" class="w3-bar-item w3-button">Networking</a>
+			        <a href="#" class="w3-bar-item w3-button">Graph</a>
+			        <a href="#" class="w3-bar-item w3-button">Datastructure</a>
+			      </div>
+			    </div>  
+
+			    <div class="w3-dropdown-hover">
+			      <button class="w3-button">Top Issues</button>
+			    </div>
+			    <div class="w3-dropdown-hover">
+			      <button class="w3-button">New Arrivels</button>
+			    </div>
+			</div>
+
+
+		</td>
+		<td>
+			<button class="w3-button w3-right"><a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>Staff Login</button>
+		</td>
+		<td>
+			<button class="w3-button w3-right" data-popup-open="login_popup"><a href="#" class="w3-bar-item w3-button"><i class="fa fa-sign-in"></i></a>Login</button>
+		</td>
+	</tr>
+</table>
+</div>
+
+<!-- 
+	Pop up 
+-->
+<div class="popup" data-popup="login_popup">
+    <div class="popup-inner">
+        <div class="container">
+            <div class="card"></div>
+            <div class="card">
+              <h1 class="title">Login</h1>
+              <form>
+                <div class="input-container">
+                  <input type="#{type}" id="#{label}" required="required"/>
+                  <label for="#{label}">Roll No</label>
+                  <div class="bar"></div>
+                </div>
+                <div class="input-container">
+                  <input type="#{type}" id="#{label}" required="required"/>
+                  <label for="#{label}">Password</label>
+                  <div class="bar"></div>
+                </div>
+                <div class="button-container">
+                  <button><span>Go</span></button>
+                </div>
+                <div class="footer"><a href="#">Forgot your password?</a></div>
+              </form>
+            </div>
+
+            <div class="card alt">
+              <div class="toggle"></div>
+              <h1 class="title">Register
+                <div class="close"></div>
+              </h1>
+              <form>
+                <div class="input-container">
+                  <input type="#{type}" id="#{label}" required="required"/>
+                  <label for="#{label}">Roll No</label>
+                  <div class="bar"></div>
+                </div>
+                <div class="input-container">
+                  <input type="#{type}" id="#{label}" required="required"/>
+                  <label for="#{label}">Password</label>
+                  <div class="bar"></div>
+                </div>
+                <div class="input-container">
+                  <input type="#{type}" id="#{label}" required="required"/>
+                  <label for="#{label}">Repeat Password</label>
+                  <div class="bar"></div>
+                </div>
+                <div class="button-container">
+                  <button><span>Next</span></button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        <a class="popup-close" data-popup-close="login_popup" href="#">x</a>
+    </div>
+</div>
+
+
+<!-- 
+	Serch box 
+-->
+<div style="display: table; padding-bottom: 76px; padding-top: 64px; margin: auto;">
+	<div style="display: table-cell;">
+		<input id="main_searchBox" class="w3-bar-item w3-input" placeholder="Search Book or Author ">
+	</div>
+	<div style="display: table-cell; vertical-align: middle;">
+		<h3 style="margin-left: 8px; "><a href="#" class="w3-bar-item w3-button"><i class="fa fa-search"></i></a></h3>
+	</div>
+ </div>
+
+<!-- 
+	Footer 
+-->
+<div class="w3-container w3-teal" style="padding-left: 64px; padding-right: 64px; padding-top: 64px">	
+	<table width="100%">
+		<tr>
+			<td>
+				
+			</td>
+			<td>
+				<ul style="list-style: none; width:" >
+					<li>
+						<h4>&#9654; <a href="feedback.html">Feedback</a></h4>			
+					</li>
+					<li>
+						<h4>&#9654; <a ali href="faq.html">FAQ</a></h4>					
+					</li>
+				</ul>
+	
+			</td>
+		</tr>
+	</table>
+	<hr>
+	<p style="text-align: center;">
+		&copy; copyright
+	</p>
+	<br>
+</div>
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="js/index.js"></script>
+<script type="text/javascript">
+  $(function() {
+    //----- OPEN
+    $('[data-popup-open]').on('click', function(e)  {
+        var targeted_popup_class = jQuery(this).attr('data-popup-open');
+        $('[data-popup="' + targeted_popup_class + '"]').fadeIn(350);
+ 
+        e.preventDefault();
+    });
+ 
+    //----- CLOSE
+    $('[data-popup-close]').on('click', function(e)  {
+        var targeted_popup_class = jQuery(this).attr('data-popup-close');
+        $('[data-popup="' + targeted_popup_class + '"]').fadeOut(350);
+ 
+        e.preventDefault();
+    });
+});
+</script>
+</body>
+</html> 
